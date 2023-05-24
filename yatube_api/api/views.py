@@ -44,7 +44,8 @@ class APIPost(APIView):
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
-# Test for pull request
+# Test for pull request with conflicts
+# Test conflicts
 
 
 #generics
