@@ -1,1 +1,1 @@
-klarar u karla
+klarar u karla ukrala
