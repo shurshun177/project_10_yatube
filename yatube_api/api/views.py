@@ -33,7 +33,7 @@ def api_posts_detail(request, pk):
 #APIView
 class APIPost(APIView):
     def get(self, request):
-        posts = Post.objects.all
+        posts = Post.objects.all()
         serializer = PostSerializer(posts, many=True)
         return Response(serializer.data)
 
