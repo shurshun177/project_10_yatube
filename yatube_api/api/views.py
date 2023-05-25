@@ -13,7 +13,7 @@ from .permissions import IsOwnerOrReadOnly
 from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
-#Function-base views old
+#Function-base views new changes
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def api_posts_detail(request, pk):
     post = get_object_or_404(Post, id=pk)
@@ -31,7 +31,7 @@ def api_posts_detail(request, pk):
 
 
 
-# APIView feature/user_model
+# APIView feature/user_model remote
 class APIPost(APIView):
     def get(self, request):
         posts = Post.objects.all()
@@ -59,7 +59,7 @@ class APIPostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
-# new comment to conflict
+
 #viewsets
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
