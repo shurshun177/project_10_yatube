@@ -58,7 +58,7 @@ class APIPostDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
-
+# new comment to conflict
 #viewsets
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
