@@ -30,6 +30,7 @@ def api_posts_detail(request, pk):
     return Response(serializer.data)
 
 
+
 # APIView feature/user_model
 class APIPost(APIView):
     def get(self, request):
