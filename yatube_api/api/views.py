@@ -13,7 +13,7 @@ from .permissions import IsOwnerOrReadOnly
 from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
-#Function-base views
+#Function-base views new changes
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def api_posts_detail(request, pk):
     post = get_object_or_404(Post, id=pk)
