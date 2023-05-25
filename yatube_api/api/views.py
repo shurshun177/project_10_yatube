@@ -63,7 +63,7 @@ class APIPostDetail(generics.RetrieveUpdateDestroyAPIView):
 #viewsets
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
-    serializer_class = PostSerializer
+    serializer_class = PostSerializer # somthing
     permission_classes = [IsOwnerOrReadOnly, IsAuthenticated]
 
     def perform_create(self, serializer):
