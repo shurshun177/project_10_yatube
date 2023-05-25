@@ -31,7 +31,7 @@ def api_posts_detail(request, pk):
 
 
 
-# APIView feature/user_model
+# APIView feature/user_model new
 class APIPost(APIView):
     def get(self, request):
         posts = Post.objects.all()
