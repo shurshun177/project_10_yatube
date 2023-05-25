@@ -6,6 +6,7 @@ from rest_framework import generics
 from rest_framework import viewsets
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+# comment for line 9
 
 from ..posts.models import Group, Post
 
