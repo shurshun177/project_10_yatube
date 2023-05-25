@@ -13,7 +13,7 @@ from .permissions import IsOwnerOrReadOnly
 from .serializers import CommentSerializer, GroupSerializer, PostSerializer
 
 
-#Function-base views new changes
+#Function-base views new changes old
 @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 def api_posts_detail(request, pk):
     post = get_object_or_404(Post, id=pk)
@@ -63,7 +63,7 @@ class APIPostDetail(generics.RetrieveUpdateDestroyAPIView):
 #viewsets
 class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
-    serializer_class = PostSerializer # somthing
+    serializer_class = PostSerializer # new comment
     permission_classes = [IsOwnerOrReadOnly, IsAuthenticated]
 
     def perform_create(self, serializer):
