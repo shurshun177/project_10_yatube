@@ -30,6 +30,7 @@ def api_posts_detail(request, pk):
     return Response(serializer.data)
 
 
+
 # APIView feature/user_model
 class APIPost(APIView):
     def get(self, request):
@@ -69,7 +70,7 @@ class PostViewSet(viewsets.ModelViewSet):
         serializer.save(author=self.request.user)
 
 
-class CommentViewSet(viewsets.ModelViewSet):
+class NewCommentViewSet(viewsets.ModelViewSet):
     serializer_class = CommentSerializer
     permission_classes = [IsOwnerOrReadOnly, IsAuthenticated]
 
